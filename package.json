@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "build": "npm install && npx prisma migrate reset --force && npx prisma migrate dev --name init && npm start",
+    "build": "npm install && npx prisma migrate deploy && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "npx prisma/seed.js",
     "migrate": "npx prisma migrate deploy",
