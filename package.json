@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "build": "tsc",
+    "build": "echo 'Build não necessário'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "npx ts-node prisma/seed.ts",
+    "seed": "npx prisma/seed.js", 
     "migrate": "npx prisma migrate deploy",
     "vercel-build": "npm run migrate"
   },
@@ -26,8 +26,6 @@
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.6.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "@faker-js/faker": "^9.6.0"
   }
 }
