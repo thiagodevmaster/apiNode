@@ -8,8 +8,10 @@
     "start": "node src/server.js",
     "build": "echo 'Instalando dependências...' && npm install && echo 'Verificando status das migrações...' && npm run migrate:status && echo 'Aplicando migrações...' && npm run migrate && echo 'Iniciando servidor...' && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "npx prisma/seed.js", 
+    "seed": "npx prisma/seed.js",
     "migrate": "npx prisma migrate deploy",
+    "migrate:status": "npx prisma migrate status",
+    "migrate:reset": "npx prisma migrate reset",
     "vercel-build": "npm run migrate"
   },
   "keywords": [],
