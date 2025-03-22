@@ -12,17 +12,18 @@ model User {
   name         String     @db.VarChar(255)
   email        String     @unique @db.VarChar(255)
   password     String     @db.VarChar(255)
-  profileImage String?    @db.VarChar(255) // Tornando opcional com ?
-  lastAccess   DateTime?  // Tornando opcional
-  preferences  Json?      // Tornando opcional
-  bio          String?    @db.Text // Tornando opcional
+  profileImage String?    @db.VarChar(255)
+  lastAccess   DateTime?
+  preferences  Json?
+  bio          String?    @db.Text
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
   tasks        Task[]
   categories   Category[]
 
-  @@map("users") // Define o nome da tabela em minúsculo
+  @@map("users")
 }
+
 
 model Task {
   id           Int      @id @default(autoincrement())

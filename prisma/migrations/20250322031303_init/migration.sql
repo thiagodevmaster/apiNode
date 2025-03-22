@@ -1,26 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `category` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `task` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `user` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropForeignKey
-ALTER TABLE `task` DROP FOREIGN KEY `Task_category_id_fkey`;
-
--- DropForeignKey
-ALTER TABLE `task` DROP FOREIGN KEY `Task_user_id_fkey`;
-
--- DropTable
-DROP TABLE `category`;
-
--- DropTable
-DROP TABLE `task`;
-
--- DropTable
-DROP TABLE `user`;
-
 -- CreateTable
 CREATE TABLE `users` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
